@@ -171,6 +171,7 @@ a:hover {
   margin-bottom: 32px;
   padding-bottom: 20px;
   border-bottom: 1px solid color-mix(in srgb, var(--cyan) 40%, transparent);
+  width: 70%;
 }
 
 .bbc-prompt {
@@ -180,6 +181,21 @@ a:hover {
   letter-spacing: 0.04em;
   line-height: 1.1;
   margin-bottom: 10px;
+}
+
+.bbc-hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.bbc-hero-container > img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  width: 200px;
+  align-self: flex-end;
 }
 
 .prompt-sym {

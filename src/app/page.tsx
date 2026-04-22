@@ -4,16 +4,19 @@ import { ReactNode } from "react";
 export default function Home() {
   return (
     <div>
-      <div className="bbc-hero">
-        <div className="bbc-prompt">
-          <span className="prompt-sym">&gt;&nbsp;</span>
-          MIKE CONGREVE
-          <span className="bbc-cursor" />
-        </div>
-        <div className="bbc-hero-sub">
-          SOFTWARE DEVELOPMENT &amp; ENGINEERING<br />
-          LEICESTER, UK &nbsp;·&nbsp; NEARLY 2 DECADES EXPERIENCE
-        </div>
+      <div className="bbc-hero-container">
+        <div className="bbc-hero">
+          <div className="bbc-prompt">
+            <span className="prompt-sym">&gt;&nbsp;</span>
+            MIKE CONGREVE
+            <span className="bbc-cursor" />
+           </div>
+            <div className="bbc-hero-sub">
+              SOFTWARE DEVELOPMENT &amp; ENGINEERING<br />
+              LEICESTER, UK &nbsp;·&nbsp; NEARLY 2 DECADES EXPERIENCE
+            </div>
+          </div>
+        <img src="/mike-teletext.svg" alt="Mike Congreve" className="bbc-hero-img" />
       </div>
 
       <div className="bbc-grid">

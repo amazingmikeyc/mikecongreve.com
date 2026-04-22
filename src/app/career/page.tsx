@@ -49,6 +49,11 @@ export default function Career() {
             for maximum impact - ie working smartly &amp; efficiently.
           </p>
           <p>
+            In more recent times I&apos;ve been upskilling myself with React, Laravel, and Vue.
+            I&apos;ve been using Claude Code to build things and help me learn. I have some
+            quite conflicting thoughts on this, but all the words on this site are mine.
+          </p>
+          <p>
             Why not take a look at my{" "}
             <Link href="https://www.linkedin.com/in/michael-congreve-03ab151b/">
               LinkedIn profile
