@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Raleway } from "next/font/google";
+import { VT323, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const vt323 = VT323({
+  variable: "--font-vt323",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const shareTechMono = Share_Tech_Mono({
+  variable: "--font-share-tech",
   subsets: ["latin"],
-});
-
-const raleway = Raleway({
-    variable: "--font-raleway",
-    subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
-  title: "Mikecongreve.com",
-  description: "Computers man",
+  title: "Mike Congreve",
+  description: "Software development & engineering. Nearly two decades of reliable web systems.",
 };
 
 export default function RootLayout({
@@ -31,27 +27,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${raleway.variable} ${geistMono.variable} antialiased bg-indigo-100`}
-      >
-      <header>
-        <div className="text-3xl bg-sky-900 pt-5 pl-5">
-            <Link href="/">
-                <h1 className="text-white">mikecongreve.com <small>software development</small></h1>
+      <body className={`${vt323.variable} ${shareTechMono.variable}`}>
+        <header>
+          <div className="bbc-header-bar">
+            <Link href="/" className="bbc-site-name">
+              MIKECONGREVE.COM
             </Link>
-        </div>
-      </header>
-          <div className="sm:flex bg-indigo-100 v-full min-h-screen">
-              <div className="hidden md:block sm:w-1/5 ">
-                <Image className="m-5 float-right" src="/mike_right.png" width={108} height={307} alt="" />
-              </div>
-              <div className="w-full  md:max-w-3/4">
-                {children}
-              </div>
+            <span className="bbc-site-tagline">SOFTWARE DEVELOPMENT</span>
+            <span className="bbc-page-num">P100</span>
           </div>
-      <footer>
-          &copy; 2026 M Congreve
-      </footer>
+          <nav className="bbc-nav-bar">
+            <Link href="/">100 HOME</Link>
+            <Link href="/career">200 CAREER</Link>
+            <a href="//blog.mikecongreve.com">300 BLOG</a>
+          </nav>
+        </header>
+        <main className="bbc-main">
+          {children}
+        </main>
+        <footer className="bbc-footer-bar">
+          <span>© 2026 M CONGREVE</span>
+          <span>LEICESTER, UK</span>
+        </footer>
       </body>
     </html>
   );
