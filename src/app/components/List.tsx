@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export function List({ children }: { children: ReactNode }) {
   return (
-    <ul className="contact-list">
+    <ul className="bbc-contact-list">
       {children}
     </ul>
   );

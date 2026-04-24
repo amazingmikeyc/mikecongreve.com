@@ -1,22 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ReactNode } from "react";
+import {BbcBox, BbcBtn} from "@/app/components/LayoutBoxes";
 
 export default function Home() {
   return (
     <div>
       <div className="bbc-hero-container">
         <div className="bbc-hero">
-          <div className="bbc-prompt">
+          <div className="bbc-prompt uppercase">
             <span className="prompt-sym">&gt;&nbsp;</span>
-            MIKE CONGREVE
+            Mike Congreve
             <span className="bbc-cursor" />
            </div>
-            <div className="bbc-hero-sub">
-              SOFTWARE DEVELOPMENT &amp; ENGINEERING<br />
-              LEICESTER, UK &nbsp;·&nbsp; NEARLY 2 DECADES EXPERIENCE
+            <div className="bbc-hero-sub uppercase">
+              Software Development, Management &amp; Engineering.<br />
+              Leicester, UK &nbsp;
             </div>
           </div>
-        <img src="/mike-teletext.svg" alt="Mike Congreve" className="bbc-hero-img" />
+        <Image src="/mike-teletext.svg" alt="Mike Congreve" className="bbc-hero-img" width={200} height={170} />
       </div>
 
       <div className="bbc-grid">
@@ -55,13 +57,18 @@ export default function Home() {
                 linkedin.com/in/michael-congreve
               </a>
             </li>
-            <li style={{ color: "#444466", fontSize: "0.82rem" }}>
-              TELEPHONE: EMAIL FIRST
+            <li style={{ color: "#444466", fontSize: "0.82rem" }} className={"uppercase"}>
+              Telephone: Email first
             </li>
           </ul>
         </BbcBox>
 
         <BbcBox title="PROJECTS" pageNum="501" color="magenta">
+          <ul className="bbc-contact-list">
+            <li>
+              <Link href="/projects/runplanner">Run Planner</Link>
+            </li>
+          </ul>
           <p>More to come here!</p>
           <p style={{ color: "#444466", fontSize: "0.82rem" }}>
             LOADING...
@@ -72,32 +79,4 @@ export default function Home() {
   );
 }
 
-function BbcBox({
-  title,
-  pageNum,
-  color,
-  children,
-}: {
-  title: string;
-  pageNum: string;
-  color: "cyan" | "yellow" | "green" | "magenta";
-  children: ReactNode;
-}) {
-  return (
-    <div className={`bbc-box bbc-${color}`}>
-      <div className="bbc-box-header">
-        <span>{title}</span>
-        <span className="bbc-box-pagenum">P{pageNum}</span>
-      </div>
-      {children}
-    </div>
-  );
-}
 
-function BbcBtn({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <Link href={href} className="bbc-btn">
-      {children}
-    </Link>
-  );
-}

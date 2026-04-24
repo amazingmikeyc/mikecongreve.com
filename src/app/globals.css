@@ -329,6 +329,11 @@ a:hover {
   border-bottom: 1px solid #1A1A2E;
 }
 
+.square-bullets-list {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
 .bbc-contact-list li:last-child { border-bottom: none; }
 
 .bbc-contact-list li::before {
