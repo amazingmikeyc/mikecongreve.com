@@ -49,6 +49,7 @@ export default function RootLayout({
           <span>© 2026 M CONGREVE</span>
           <span>LEICESTER, UK</span>
         </footer>
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </body>
     </html>
   );
