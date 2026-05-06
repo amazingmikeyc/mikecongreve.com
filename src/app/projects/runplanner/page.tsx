@@ -81,7 +81,7 @@ export default function RunPlannerPage() {
                             Basic comparison and analysis
                         </ListItem>
                         <ListItem>
-                            CVV import and export
+                            CSV import and export
                         </ListItem>
                     </List>
 
