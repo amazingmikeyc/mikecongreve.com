@@ -8,13 +8,6 @@ import {Input} from "postcss";
 import {SignUpForm} from "@/app/components/SignupForm";
 
 export default function RunPlannerPage() {
-
-    const items = [
-
-    ]
-
-
-
     return (<>
             <div className="space-y-4">
             <div className="bbc-hero-container">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {projects} from "@/app/menusandlists";
 
 const skills = [
   { label: "PHP", tags: ["Laravel", "Symfony", "Composer", "PHPUnit", "WordPress"] },
@@ -58,8 +59,15 @@ export default function Career() {
             <Link href="https://www.linkedin.com/in/michael-congreve-03ab151b/">
               LinkedIn profile
             </Link>
-            {" "}for a detailed breakdown of my skills.
+            {" "}for a detailed breakdown of my skills, or have a look below.
           </p>
+          <div className="bbc-about-title">Things I've Made</div> <ul className="bbc-contact-list">
+            {projects.map((project) => (
+                <li key={project.title}>
+                  <Link href={project.url}>{project.title}</Link>
+                </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

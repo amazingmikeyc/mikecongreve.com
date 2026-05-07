@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
 import {BbcBox, BbcBtn} from "@/app/components/LayoutBoxes";
+import {projects} from "@/app/menusandlists";
 
 export default function Home() {
   return (
@@ -65,9 +66,11 @@ export default function Home() {
 
         <BbcBox title="PROJECTS" pageNum="501" color="magenta">
           <ul className="bbc-contact-list">
-            <li>
-              <Link href="/projects/runplanner">Run Planner</Link>
-            </li>
+            {projects.map((project) => (
+                <li key={project.title}>
+                  <Link href={project.url}>{project.title}</Link>
+                </li>
+            ))}
           </ul>
           <p>More to come here!</p>
           <p style={{ color: "#444466", fontSize: "0.82rem" }}>
