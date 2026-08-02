@@ -8,5 +8,9 @@ export const projects: Project[] = [
     {
         title: "mikecongreve.com",
         url: "/projects/thissite",
+    },
+    {
+        title: "Swipe Runner",
+        url: "/projects/swiperunner",
     }
 ]
