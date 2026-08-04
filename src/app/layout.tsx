@@ -28,9 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <Head>
+    <head>
       <meta name="google-adsense-account" content="ca-pub-5169550892885395"/>
-    </Head>
+    </head>
     <body className={`${vt323.variable} ${shareTechMono.variable}`}>
         <header>
           <div className="bbc-header-bar">
