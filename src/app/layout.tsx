@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VT323, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Head from "next/head";
 
 const vt323 = VT323({
   variable: "--font-vt323",
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${vt323.variable} ${shareTechMono.variable}`}>
+    <Head>
+      <meta name="google-adsense-account" content="ca-pub-5169550892885395"/>
+    </Head>
+    <body className={`${vt323.variable} ${shareTechMono.variable}`}>
         <header>
           <div className="bbc-header-bar">
             <Link href="/" className="bbc-site-name">
